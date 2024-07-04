@@ -1,7 +1,4 @@
 import React, { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons'; 
-import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
 
 function Navbar() {
