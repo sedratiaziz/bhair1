@@ -12,7 +12,7 @@ function Categ() {
             <div className="row row-whith-wide-cards d-flex justify-content-center text-center py-0 py-md-2 py-lg-2">
                 <div id="h10" className="hidden col col-12 col-lg-4 col-md-6 col-sm-12 py-3">
                     <div className="card h-100 shadow" id="classic">
-                        <img src={cncr} id="classic_img" className="card-img-top" />
+                        <img alt='animg' src={cncr} id="classic_img" className="card-img-top" />
                         <div className="card-body">
                             <h3 className="crd1 card-title py-3">الكونكورد</h3>
                             <hr id="hr_classNameic"></hr>
@@ -26,7 +26,7 @@ function Categ() {
 
                 <div id="h10" className="hidden col d-md-none d-lg-block col-12 col-lg-4 col-md-6 col-sm-12 py-3">
                     <div className="card h-100 shadow" id="kids">
-                        <img src="" id="kids_img" className="card-img-top" />
+                        <img alt='animg' src="" id="kids_img" className="card-img-top" />
                         <div className="card-body">
                             <h3 className="card-title py-3">قيد العمل</h3>
                             <hr id="hr_kids"></hr>
@@ -40,7 +40,7 @@ function Categ() {
 
                 <div id="h10" className="hidden col col-12 col-lg-4 col-md-6 col-sm-12 py-3">
                     <div className="card h-100 shadow" id="sci-fi">
-                        <img src="" id="sci-fi_img" className="card-img-top" />
+                        <img alt='animg' src="" id="sci-fi_img" className="card-img-top" />
                         <div className="card-body">
                             <h3 className="card-title py-3">قيد العمل</h3>
                             <hr id="hr_sci-fi"></hr>

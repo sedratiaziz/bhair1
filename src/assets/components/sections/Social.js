@@ -10,7 +10,7 @@ function Categ() {
                 <div className="row d-flex justify-content-center row-whith-wide-cards text-center pt-4 py-md-2 py-lg-2">
                     <div id="h10" className="hidden col col-12 col-lg-4 col-md-6 col-sm-12 py-3">
                         <div className="card h-100 shadow" id="action">
-                            <img src={youtubeLong} id="action_img" className="card-img-top" style={{ height: "14rem" }} />
+                            <img alt='anotherimg' src={youtubeLong} id="action_img" className="card-img-top" style={{ height: "14rem" }} />
                             <div className="card-body">
                                 <h3 className="card-title py-3">يوتيوب</h3>
                                 <hr></hr>
@@ -23,7 +23,7 @@ function Categ() {
 
                     <div id="h10" className="hidden col col-12 col-lg-4 col-md-6 col-sm-12 py-3">
                         <div className="card h-100 shadow" id="action">
-                            <img src={youtubeLong} id="action_img" className="card-img-top" style={{ height: "14rem" }} />
+                            <img alt='anotherimg' src={youtubeLong} id="action_img" className="card-img-top" style={{ height: "14rem" }} />
                             <div className="card-body">
                                 <h3 className="card-title py-3">يوتيوب</h3>
                                 <hr></hr>
@@ -36,7 +36,7 @@ function Categ() {
 
                     <div id="h10" className="hidden col col-12 col-lg-4 col-md-6 col-sm-12 py-3">
                         <div className="card h-100 shadow" id="action">
-                            <img src={youtubeLong} id="action_img" className="card-img-top" style={{ height: "14rem" }} />
+                            <img alt='anotherimg' src={youtubeLong} id="action_img" className="card-img-top" style={{ height: "14rem" }} />
                             <div className="card-body">
                                 <h3 className="card-title py-3">يوتيوب</h3>
                                 <hr></hr>
@@ -50,7 +50,7 @@ function Categ() {
                     {/* visible only on md screens */}
                     <div id="h10" className="hidden col d-none d-md-block d-lg-none col-12 col-lg-4 col-md-6 col-sm-12 py-3">
                         <div className="card h-100 shadow" id="kids">
-                            <img src={telegram} id="kids_img" className="card-img-top" />
+                            <img alt='anotherimg' src={telegram} id="kids_img" className="card-img-top" />
                             <div className="card-body">
                                 <h3 className="card-title py-3">تلقرام</h3>
                                 <hr id="hr_kids"></hr>
@@ -67,7 +67,7 @@ function Categ() {
                 <div className="row row-whith-wide-cards d-flex justify-content-center text-center py-2">
                     <div id="h10" className="hidden d-md-none d-lg-block d-sm-block col col-12 col-lg-5 col-md-8 col-sm-12 py-3">
                         <div className="card h-100 shadow" id="sci-fi">
-                            <img src={telegram} id="sci-fi_img" className="card-img-top" />
+                            <img alt='anotherimg' src={telegram} id="sci-fi_img" className="card-img-top" />
                             <div className="card-body">
                                 <h3 className="card-title py-3">تلقرام</h3>
                                 <hr id="hr_sci-fi"></hr>
@@ -80,7 +80,7 @@ function Categ() {
                 </div>
                 {/* SECOND ROW */}
 
-            
+
             </div>
         </section>
     );
