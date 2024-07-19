@@ -60,7 +60,7 @@ function Navbar() {
       <div className="container">
         <div className="px-lg-4 d-flex justify-content-center align-items-center">
           <a href="#sec1" className="navbar-brand">
-            <span id="brand">Riyadh Shagera</span>
+            <span id="brand">Riyadh 123Shagera</span>
           </a>
         </div>
 
