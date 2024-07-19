@@ -2,7 +2,6 @@ import React from 'react';
 import '../App.css'; // Import your CSS styles
 // In your React component file, e.g., App.js
 import '../assets/fonts/fonts.css';
-import { Helmet } from 'react-helmet-async';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import useScrollAnimation from '../assets/Hooks/useScrollAnimation'
