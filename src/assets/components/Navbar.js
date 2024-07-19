@@ -1,32 +1,71 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function Navbar() {
   const [isActive, setIsActive] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleMenu = () => {
     setIsActive(!isActive);
   };
 
+  const [navbarStyle, setNavbarStyle] = useState({
+    backgroundColor: 'transparent',
+    backdropFilter: 'blur(0px)',
+    transition: 'background-color 0.2s, backdrop-filter 0.2s',
+  });
+
+  const handleScroll = () => {
+    if (window.scrollY > 70) {
+      setNavbarStyle({
+        backgroundColor: 'rgba(255, 255, 255, 0.129)',
+        backdropFilter: 'blur(17px)',
+        transition: 'background-color 0.3s, backdrop-filter 0.3s',
+      });
+      setIsScrolled(true);
+    } else {
+      setNavbarStyle({
+        backgroundColor: 'transparent',
+        backdropFilter: 'blur(0px)',
+        transition: 'background-color 0.5s, backdrop-filter 0.5s',
+      });
+      setIsScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const linkStyle = {
+    textDecoration: 'none',
+    color: isScrolled ? 'white' : 'black',
+  };
+
+  const liStyle = {
+    display: isScrolled ? 'block' : 'none',
+    padding: '10px 15px',
+  };
+
   return (
     <div
       id="navbr"
-      className="navbar navbar-expand-md navbar-dark text-white shadow p-3 fixed-top"
-      style={{
-        backgroundColor: 'rgba(255, 255, 255, 0.129)',
-        backdropFilter: 'blur(17px)',
-        WebkitBackdropFilter: 'blur(17px)',
-        fontFamily: 'Poppins, sans-serif'
-      }}
+      className={`navbar navbar-expand-md navbar-dark text-white p-3 fixed-top ${
+        isScrolled ? 'shadow' : ''
+      }`}
+      style={navbarStyle}
     >
       <div className="container">
         <div className="px-lg-4 d-flex justify-content-center align-items-center">
-          <Link to={"/"} className="navbar-brand">
-            <span id="brand">Riyadh Shajra</span>
-          </Link>
+          <a href="#sec1" className="navbar-brand">
+            <span id="brand">Riyadh Shagera</span>
+          </a>
         </div>
 
-        <div>
+        <div style={{ display: isScrolled ? 'block' : 'none' }}>
           <svg
             className={`ham ham3 d-md-none d-lg-none ${isActive ? 'active' : ''}`}
             viewBox="0 0 100 100"
@@ -50,15 +89,21 @@ function Navbar() {
 
         <div className={`collapse navbar-collapse ${isActive ? 'show' : ''}`} id="mainmenu">
           <ul id="uli" className="navbar-nav text-center ms-auto d-flex align-items-center">
-            <li className="nav-item px-2 py-sm-2 py-md-2">
-              <a href="#be_prepared" className="nav-link">! اربطو الأحزمة</a>
+            <li
+              style={liStyle}
+              className="nav-item px-4 pt-4 py-3 py-sm-4 py-md-2"
+            >
+              <a href="#be_prepared" style={linkStyle}>! اربطو الأحزمة</a>
             </li>
-            <li className="nav-item px-2 py-sm-2 py-md-2">
-              <a href="#Categories" className="nav-link">حساباتي</a>
+            <li
+              style={liStyle}
+              className="nav-item px-5 pb-4 py-3 py-sm-4 py-md-2"
+            >
+              <a href="#Categories" style={linkStyle}>حساباتي</a>
             </li>
-            <li className="nav-item px-2 py-sm-2 py-md-2">
-              <Link to={"/Feedback"} className="nav-link">لديك ملاحظات؟</Link>
-            </li>
+            {/* <!--<li className="nav-item px-2 py-sm-2 py-md-2">
+            <Link to={"/Feedback"} className="nav-link">لديك ملاحظات؟</Link>
+            </li>--> */}
           </ul>
         </div>
       </div>

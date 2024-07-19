@@ -2,15 +2,21 @@ body {
   background: url(./assets/img/bg.svg) no-repeat center center fixed;
   background-size: cover;
   animation: gradient 17s ease 1;
+  overflow-x: hidden; /* Optional: Prevent horizontal scroll */
+  background-color: #001220;
 }
+
+.sm-page-hasbackground>.sm-page-background {height: 100vh}
 
 #wait2 {
   font-family: 'ibmReg', sans-serif;
 }
 
 #sec1 {
-  height: 100vh;
+  height: 100vh; /* Fallback for browsers that handle vh correctly */
+  height: calc(var(--vh, 1vh) * 100);
 }
+
 
 #title {
   font-size: 70px;
@@ -180,6 +186,7 @@ opacity:1;
       animation-duration: 2s;
       transition: 0.5s;
       animation-delay: 0.5s;
+      opacity: 0.25;
       
   }
 
@@ -243,7 +250,9 @@ opacity:1;
   
 
 
-
+  .telegram_h3 {
+    font-family: 'TajawalReg', sans-serif;
+  }
       
 
       /*glass effect card*/
@@ -273,7 +282,7 @@ opacity:1;
           -webkit-backdrop-filter: blur(17px);
           background-size: cover; /* or contain depending on what you want */
           background-position: center center;
-          font-family: 'Tajawal', sans-serif;
+          font-family: 'TajawalReg', sans-serif;
       }
 
       #comedy{
@@ -283,7 +292,7 @@ opacity:1;
           -webkit-backdrop-filter: blur(17px);
           background-size: cover; /* or contain depending on what you want */
           background-position: center center;
-          font-family: 'Tajawal', sans-serif;
+          font-family: 'TajawalReg', sans-serif;
        }
 
 
@@ -294,7 +303,7 @@ opacity:1;
           -webkit-backdrop-filter: blur(17px);
           background-size: cover; /* or contain depending on what you want */
           background-position: center center;
-          font-family: 'Tajawal', sans-serif;
+          font-family: 'TajawalReg', sans-serif;
 
        }
 
@@ -306,7 +315,7 @@ opacity:1;
           -webkit-backdrop-filter: blur(17px);
           background-size: cover; /* or contain depending on what you want */
           background-position: center center;
-          font-family: 'Tajawal', sans-serif;            
+          font-family: 'TajawalReg', sans-serif;            
 
        }
 
@@ -383,6 +392,7 @@ outline: none;
 }
 
 .bn632-hover.bn28 {
+  width: 100px;
 background-image: linear-gradient(
   to right,
   #eb3941,
@@ -513,6 +523,7 @@ outline: none;
 }
 
 .bn632-hover.islamic {
+  width: 100px;
 background-image: linear-gradient(
   to right,
   #3760B4,
@@ -520,6 +531,9 @@ background-image: linear-gradient(
   #03afe8,
   #3f86ed
 );
+
+
+font-family: 'TajawalReg', sans-serif;
 }
 
 
@@ -598,6 +612,7 @@ outline: none;
 }
 
 .bn632-hover.bn25 {
+  width: 100px;
 background-image: linear-gradient(
   to right,
   #cdbc23,
@@ -605,6 +620,7 @@ background-image: linear-gradient(
 );
 }
 
+/*concorde button*/
 .bn632-hover.bn25c {
 background-image: linear-gradient(
   to right,
@@ -613,7 +629,92 @@ background-image: linear-gradient(
   #849bbb,
   rgb(56, 159, 223)
 );
+
+font-family: 'TajawalReg', sans-serif;
 }
+
+/*wizz button*/
+.bn632-hover.bn25w {
+  background-image: linear-gradient(
+    to right,
+    #5832cd,
+    rgb(227, 21, 110),
+    rgb(227, 21, 110),
+    #5832cd
+  );
+  
+  font-family: 'TajawalReg', sans-serif;
+  }
+
+  /*longflight button*/
+.bn632-hover.bn25l {
+  background-image: linear-gradient(
+    45deg,
+    #9e9aaa,
+    rgb(49, 47, 48),
+    rgb(49, 47, 48),
+    #9e9aaa
+  );
+  
+  font-family: 'TajawalReg', sans-serif;
+  }
+
+
+
+.bn632-hover {
+  width: 160px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 55px;
+  text-align:center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.bn632-hover:hover {
+  background-position: 100% 0;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.bn632-hover:focus {
+  outline: none;
+}
+
+.bn632-hover.bn25 {
+  background-image: linear-gradient(
+    to right,
+    #29323c,
+    #485563,
+    #2b5876,
+    #4e4376
+  );
+}
+
+
+.bn632-hover.bn25snp {
+  width: 100px;
+  background-image: linear-gradient(
+    to right,
+    #e9c706,
+    #917f1c,
+    #917f1c,
+    #e9c706
+  );
+}
+
+
+
 
 .bn632-hover {
 width: 160px;
@@ -832,12 +933,8 @@ body {
 }
 
 
-@media screen and (max-width: 768px) {
 ::-webkit-scrollbar {
   display: none;
-}
-
-
 }
 
 
@@ -864,8 +961,8 @@ body {
 
 @media (max-width: 768px) { 
 
-body{
-background-image: url(./assets/img/bg1.svg);
+body {
+  background-image: url(./assets/img/bg_tablet.svg); /* Change background image for smaller screens if needed */
 }
 
 #title{
@@ -875,6 +972,16 @@ background-image: url(./assets/img/bg1.svg);
 
 
 }
+
+
+
+@media (max-width: 425px) {
+    body {
+      background-image: url(./assets/img/bg_mobile.svg); /* Change background image for smaller screens if needed */
+    }
+  } 
+
+
 
 
 
@@ -915,4 +1022,23 @@ background-image: url(./assets/img/bg1.svg);
 }
 
 
+/* Define the keyframes for the slide-in animation */
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Apply the animation when the navbar is active */
+.navbar-active {
+  animation: slideInFromLeft 0.5s ease-out;
+}
+
+
+#seatbelt {
+  font-family: 'ibmMed', sans-serif;
+}
 

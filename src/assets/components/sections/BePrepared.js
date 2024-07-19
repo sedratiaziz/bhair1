@@ -7,11 +7,11 @@ function BePrepared() {
       <div className="container">
         <div className="row d-flex flex-row-reverse justify-content-center align-items-center">
           <div className="col-md d-flex justify-content-center align-items-center py-3">
-            <img src={seatbeltImg} alt="Seatbelt" className="img-fluid w-75" style={{ borderRadius: '15px' }} />
+            <img src={seatbeltImg} alt="Seatbeltt" className="img-fluid w-75" style={{ borderRadius: '15px' }} />
           </div>
 
           <div className="col-md text-white py-3">
-            <h1 className="py-2 text-center text-md-end text-lg-end text-xlg-end">! اربطو الأحزمة</h1>
+            <h1 id="seatbelt" className="py-2 text-center text-md-end text-lg-end text-xlg-end">! اربطو الأحزمة</h1>
             <br></br>
             <br></br>
             <p id="be_prepared_p" className="text-center text-md-end text-lg-end text-xlg-end">

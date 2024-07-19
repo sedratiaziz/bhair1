@@ -43,3 +43,23 @@
 }
 
 
+
+/*Tajawal Reg */
+@font-face {
+  font-family: 'TajawalReg';
+  src: url('./tajawal/Tajawal-Regular.ttf') format('truetype');         
+}
+
+/*Tajawal Bold */
+@font-face {
+  font-family: 'TajawalMed';
+  src: url('./tajawal/Tajawal-Medium.ttf') format('truetype');         
+}
+
+/*Tajawal Bold */
+@font-face {
+  font-family: 'TajawalBold';
+  src: url('./tajawal/Tajawal-Bold.ttf') format('truetype');         
+}
+
+

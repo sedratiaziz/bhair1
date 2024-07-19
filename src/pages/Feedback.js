@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import plant from '../assets/img/plant.jpg';
 import styled from 'styled-components';
@@ -28,7 +28,7 @@ const ContactBox = styled.div`
 
   @media screen and (max-width: 880px) {
     grid-template-columns: 1fr;
-    margin: 25px;  /* Add horizontal padding */
+    margin: 25px;
     padding: 15px;
   }
 `;
@@ -140,18 +140,49 @@ const Button2 = styled.button`
 `;
 
 const Feedback = () => {
+  const [status, setStatus] = useState('');
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
+
+    try {
+      const response = await fetch('/', {
+        method: 'POST',
+        body: data,
+      });
+
+      if (response.ok) {
+        setStatus('Form submission successful!');
+        form.reset(); // Clear form
+      } else {
+        setStatus('Form submission failed.');
+      }
+    } catch (error) {
+      setStatus(`Form submission error: ${error.message}`);
+    }
+  };
+
   return (
     <Container>
       <ContactBox>
         <Left />
         <Right>
           <Title>! رأيكم يهمنا</Title>
-          <form name="feedback" method="post" data-netlify="true" netlify-honeypot="bot-field">
+          <form
+            name="feedback"
+            method="post"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            onSubmit={handleSubmit}
+          >
             <input type="hidden" name="form-name" value="feedback" />
             <Field type="text" name="name" placeholder="الإسم" required />
             <Field type="email" name="email" placeholder="بريدك الإلكتروني" required />
             <MessageField as="textarea" name="message" placeholder="رسالتك" required />
             <Button primary type="submit">إرسال</Button>
+            <p>{status}</p>
             <Link to="/">
               <Button2 type="button">الصفحة الرئيسية</Button2>
             </Link>
@@ -160,6 +191,6 @@ const Feedback = () => {
       </ContactBox>
     </Container>
   );
-}
+};
 
 export default Feedback;
